@@ -43,7 +43,6 @@ typedef unsigned char   StatusType;
 /** \brief  Defines if a statically configurable functionality is activated. */
 #define STD_ON          (0x01U)
 
-/*-------
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                          Definition Of Global Data Types                                          */

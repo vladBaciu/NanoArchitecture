@@ -13,8 +13,12 @@ Discarded input sections
  .text          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .data          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .bss           0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
- .debug_line    0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
- .debug_str     0x00000000      0x128 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_info    0x00000000       0x48 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_abbrev  0x00000000       0x1b 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_aranges
+                0x00000000       0x18 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_line    0x00000000       0x1a 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_str     0x00000000      0x171 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .comment       0x00000000       0x31 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .text          0x00000000        0x0 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -387,11 +391,11 @@ END GROUP
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 02_RTE/main.o
 
-.debug_str      0x00000000      0x398
+.debug_str      0x00000000      0x38f
  *(.debug_str)
  .debug_str     0x00000000      0x208 D:/Programe/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x190 02_RTE/main.o
-                                0x1c4 (size before relaxing)
+ .debug_str     0x00000208      0x187 02_RTE/main.o
+                                0x1bb (size before relaxing)
 
 .debug_loc      0x00000000       0x48
  *(.debug_loc)
