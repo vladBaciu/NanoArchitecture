@@ -127,6 +127,9 @@
     <ListValues>
       <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
       <Value>../07_Libraries/Std/Generic/Code</Value>
+      <Value>../07_Libraries/RegisterInit/Generic</Value>
+      <Value>../05_MCAL/Port/Config</Value>
+      <Value>../05_MCAL/Port/Generic</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -154,6 +157,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="02_RTE\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="05_MCAL\Port\Config\Port_PBCfg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="05_MCAL\Port\Generic\Port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="05_MCAL\Port\Generic\Port.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="07_Libraries\RegisterInit\Generic\RegisterInit.c">
@@ -194,6 +206,9 @@
     <Folder Include="04_EcuAbstraction\Code" />
     <Folder Include="04_EcuAbstraction\Info" />
     <Folder Include="05_MCAL" />
+    <Folder Include="05_MCAL\Port" />
+    <Folder Include="05_MCAL\Port\Generic" />
+    <Folder Include="05_MCAL\Port\Config" />
     <Folder Include="06_ComplexDrivers" />
     <Folder Include="07_Libraries" />
     <Folder Include="07_Libraries\Std" />

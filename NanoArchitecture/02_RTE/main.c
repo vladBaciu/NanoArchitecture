@@ -7,11 +7,12 @@
 #define F_CPU (16000000U)
 #include <avr/io.h>
 #include <util/delay.h>
+#include "Port.h"
 
 int main(void)
 {
 DDRD |= 0xFF;// setting the pin PD3 as output
-
+Port_Init(&Port_gkt_Config);
 for(;;)
 
 {

@@ -54,6 +54,9 @@ SUBDIRS :=  \
 ../04_EcuAbstraction/Code \
 ../04_EcuAbstraction/Info \
 ../05_MCAL \
+../05_MCAL/Port \
+../05_MCAL/Port/Generic \
+../05_MCAL/Port/Config \
 ../06_ComplexDrivers \
 ../07_Libraries \
 ../07_Libraries/Std \
@@ -67,6 +70,8 @@ SUBDIRS :=  \
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
 ../02_RTE/main.c \
+../05_MCAL/Port/Config/Port_PBCfg.c \
+../05_MCAL/Port/Generic/Port.c \
 ../07_Libraries/RegisterInit/Generic/RegisterInit.c
 
 
@@ -78,18 +83,26 @@ ASM_SRCS +=
 
 OBJS +=  \
 02_RTE/main.o \
+05_MCAL/Port/Config/Port_PBCfg.o \
+05_MCAL/Port/Generic/Port.o \
 07_Libraries/RegisterInit/Generic/RegisterInit.o
 
 OBJS_AS_ARGS +=  \
 02_RTE/main.o \
+05_MCAL/Port/Config/Port_PBCfg.o \
+05_MCAL/Port/Generic/Port.o \
 07_Libraries/RegisterInit/Generic/RegisterInit.o
 
 C_DEPS +=  \
 02_RTE/main.d \
+05_MCAL/Port/Config/Port_PBCfg.d \
+05_MCAL/Port/Generic/Port.d \
 07_Libraries/RegisterInit/Generic/RegisterInit.d
 
 C_DEPS_AS_ARGS +=  \
 02_RTE/main.d \
+05_MCAL/Port/Config/Port_PBCfg.d \
+05_MCAL/Port/Generic/Port.d \
 07_Libraries/RegisterInit/Generic/RegisterInit.d
 
 OUTPUT_FILE_PATH +=NanoArchitecture.elf
@@ -109,14 +122,28 @@ LINKER_SCRIPT_DEP+=
 02_RTE/main.o: ../02_RTE/main.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Programe\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include" -I"../07_Libraries/Std/Generic/Code"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Programe\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include" -I"../07_Libraries/Std/Generic/Code" -I"../07_Libraries/RegisterInit/Generic" -I"../05_MCAL/Port/Config" -I"../05_MCAL/Port/Generic"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+05_MCAL/Port/Config/Port_PBCfg.o: ../05_MCAL/Port/Config/Port_PBCfg.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Programe\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include" -I"../07_Libraries/Std/Generic/Code" -I"../07_Libraries/RegisterInit/Generic" -I"../05_MCAL/Port/Config" -I"../05_MCAL/Port/Generic"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+05_MCAL/Port/Generic/Port.o: ../05_MCAL/Port/Generic/Port.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)D:\Programe\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include" -I"../07_Libraries/Std/Generic/Code" -I"../07_Libraries/RegisterInit/Generic" -I"../05_MCAL/Port/Config" -I"../05_MCAL/Port/Generic"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 07_Libraries/RegisterInit/Generic/RegisterInit.o: ../07_Libraries/RegisterInit/Generic/RegisterInit.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)D:\Programe\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include" -I"../07_Libraries/Std/Generic/Code"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)D:\Programe\AtmelStudio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include" -I"../07_Libraries/Std/Generic/Code" -I"../07_Libraries/RegisterInit/Generic" -I"../05_MCAL/Port/Config" -I"../05_MCAL/Port/Generic"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "D:\Programe\AtmelStudio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 

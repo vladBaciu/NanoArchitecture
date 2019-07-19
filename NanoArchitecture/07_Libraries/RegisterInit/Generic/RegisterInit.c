@@ -81,16 +81,16 @@ void RegInit_gv_Unmasked16Bits(const RegInit_Unmasked16BitsConfigType* pt_Unmask
 *	\param
 *   \return
 */
-extern void RegInit_gv_Masked8Bits(const RegInit_Masked8BitsConfigType* pt_Unmasked8BitsConfig)
+extern void RegInit_gv_Masked8Bits(const RegInit_Masked8BitsConfigType* pt_Masked8BitsConfig)
 {
 		uint16 uc_I;
 		volatile uint8 uc_RegVal;
-		for(uc_I = 0; uc_I < pt_Unmasked8BitsConfig->us_NumberOfRegisters; uc_I++)
+		for(uc_I = 0; uc_I < pt_Masked8BitsConfig->us_NumberOfRegisters; uc_I++)
 		{
-			uc_RegVal = *pt_Unmasked8BitsConfig->kpt_Registers[uc_I].puc_Register;
-			uc_RegVal &= pt_Unmasked8BitsConfig->kpt_Registers[uc_I].uc_AndMask;
-			uc_RegVal |= pt_Unmasked8BitsConfig->kpt_Registers[uc_I].uc_OrMask;
-			(*pt_Unmasked8BitsConfig->kpt_Registers[uc_I].puc_Register) = uc_RegVal;
+			uc_RegVal = *pt_Masked8BitsConfig->kpt_Registers[uc_I].puc_Register;
+			uc_RegVal &= pt_Masked8BitsConfig->kpt_Registers[uc_I].uc_AndMask;
+			uc_RegVal |= pt_Masked8BitsConfig->kpt_Registers[uc_I].uc_OrMask;
+			(*pt_Masked8BitsConfig->kpt_Registers[uc_I].puc_Register) = uc_RegVal;
 		}
 }
 /*
@@ -98,16 +98,16 @@ extern void RegInit_gv_Masked8Bits(const RegInit_Masked8BitsConfigType* pt_Unmas
 *	\param
 *   \return
 */
-extern void RegInit_gv_Masked16Bits(const RegInit_Masked16BitsConfigType* pt_Unmasked16BitsConfig)
+extern void RegInit_gv_Masked16Bits(const RegInit_Masked16BitsConfigType* pt_Masked16BitsConfig)
 {
 			uint16 uc_I;
 			volatile uint16 uc_RegVal;
-			for(uc_I = 0; uc_I < pt_Unmasked16BitsConfig->us_NumberOfRegisters; uc_I++)
+			for(uc_I = 0; uc_I < pt_Masked16BitsConfig->us_NumberOfRegisters; uc_I++)
 			{
-				uc_RegVal = *pt_Unmasked16BitsConfig->kpt_Registers[uc_I].pus_Register;
-				uc_RegVal &= pt_Unmasked16BitsConfig->kpt_Registers[uc_I].us_AndMask;
-				uc_RegVal |= pt_Unmasked16BitsConfig->kpt_Registers[uc_I].us_OrMask;
-				(*pt_Unmasked16BitsConfig->kpt_Registers[uc_I].pus_Register) = uc_RegVal;
+				uc_RegVal = *pt_Masked16BitsConfig->kpt_Registers[uc_I].pus_Register;
+				uc_RegVal &= pt_Masked16BitsConfig->kpt_Registers[uc_I].us_AndMask;
+				uc_RegVal |= pt_Masked16BitsConfig->kpt_Registers[uc_I].us_OrMask;
+				(*pt_Masked16BitsConfig->kpt_Registers[uc_I].pus_Register) = uc_RegVal;
 			}
 	
 }
