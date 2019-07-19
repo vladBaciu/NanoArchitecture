@@ -31,22 +31,22 @@ typedef struct
 typedef struct
 {
 	const RegInit_Unmasked8BitsSingleType * kpt_Registers;
-	uint8 uc_NumberOfRegisters;	
+	uint16 us_NumberOfRegisters;	
 	
 }RegInit_Unmasked8BitsConfigType;
 
 /** \brief  Defines a configuration for a single 16-bits register. */
 typedef struct
 {
-	volatile uint16* puc_Register;
-	uint16 uc_Value;
+	volatile uint16* pus_Register;
+	uint16 us_Value;
 } RegInit_Unmasked16BitsSingleType;
 
 /** \brief  Defines a configuration of multiple  16-bits register. */
 typedef struct
 {
 	const RegInit_Unmasked16BitsSingleType * kpt_Registers;
-	uint16 uc_NumberOfRegisters;	
+	uint16 us_NumberOfRegisters;	
 	
 }RegInit_Unmasked16BitsConfigType;
 
@@ -62,23 +62,23 @@ typedef struct
 typedef struct
 {
 	const RegInit_Masked8BitsSingleType * kpt_Registers;
-	uint8 uc_NumberOfRegisters;	
+	uint16 us_NumberOfRegisters;	
 	
 }RegInit_Masked8BitsConfigType;
 
 /** \brief  Defines a configuration for a single 16-bits register. */
 typedef struct
 {
-	volatile uint16* puc_Register;
-	uint16 uc_AndMask;
-	uint16 uc_OrMask;
+	volatile uint16* pus_Register;
+	uint16 us_AndMask;
+	uint16 us_OrMask;
 } RegInit_Masked16BitsSingleType;
 
 /** \brief  Defines a configuration of multiple  16-bits register. */
 typedef struct
 {
 	const RegInit_Masked16BitsSingleType * kpt_Registers;
-	uint16 uc_NumberOfRegisters;	
+	uint16 us_NumberOfRegisters;	
 	
 }RegInit_Masked16BitsConfigType;
 /*-------------------------------------------------------------------------------------------------------------------*/

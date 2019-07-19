@@ -13,13 +13,24 @@ Discarded input sections
  .text          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .data          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .bss           0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
- .debug_info    0x00000000       0x48 07_Libraries/RegisterInit/Generic/RegisterInit.o
- .debug_abbrev  0x00000000       0x1b 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .text.RegInit_gv_Unmasked8Bits
+                0x00000000       0x48 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .text.RegInit_gv_Unmasked16Bits
+                0x00000000       0x4c 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .text.RegInit_gv_Masked8Bits
+                0x00000000       0x64 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .text.RegInit_gv_Masked16Bits
+                0x00000000       0x88 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_info    0x00000000      0x377 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_abbrev  0x00000000       0xb7 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_loc     0x00000000      0x210 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .debug_aranges
-                0x00000000       0x18 07_Libraries/RegisterInit/Generic/RegisterInit.o
- .debug_line    0x00000000       0x1a 07_Libraries/RegisterInit/Generic/RegisterInit.o
- .debug_str     0x00000000      0x171 07_Libraries/RegisterInit/Generic/RegisterInit.o
+                0x00000000       0x38 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_ranges  0x00000000       0x28 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_line    0x00000000      0x197 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_str     0x00000000      0x393 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .comment       0x00000000       0x31 07_Libraries/RegisterInit/Generic/RegisterInit.o
+ .debug_frame   0x00000000       0x98 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .text          0x00000000        0x0 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
