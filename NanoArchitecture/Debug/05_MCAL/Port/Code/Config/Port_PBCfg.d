@@ -1,10 +1,11 @@
-05_MCAL/Port/Config/Port_PBCfg.d 05_MCAL/Port/Config/Port_PBCfg.o: \
- ../05_MCAL/Port/Config/Port_PBCfg.c \
+05_MCAL/Port/Code/Config/Port_PBCfg.d \
+ 05_MCAL/Port/Code/Config/Port_PBCfg.o: \
+ ../05_MCAL/Port/Code/Config/Port_PBCfg.c \
  ../07_Libraries/RegisterInit/Generic/RegisterInit.h \
  ../07_Libraries/Std/Generic/Code/Std_Types.h \
  ../07_Libraries/Std/Generic/Code/Platform_Types.h \
  ../07_Libraries/Std/Generic/Code/Compiler.h \
- ../05_MCAL/Port/Generic/Port.h \
+ ../05_MCAL/Port/Code/Generic/Port.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -25,7 +26,7 @@
 
 ../07_Libraries/Std/Generic/Code/Compiler.h:
 
-../05_MCAL/Port/Generic/Port.h:
+../05_MCAL/Port/Code/Generic/Port.h:
 
 d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
