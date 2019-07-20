@@ -1,11 +1,11 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 /**
- *    \file       Port_PBCfg.c
- *    \author     Baciu Vlad-Eusebiu
- *    \brief      
- *
- *              
- */
+*    \file       Port_PBCfg.c
+*    \author     Baciu Vlad-Eusebiu
+*    \brief
+*
+*
+*/
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -39,10 +39,48 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 static const RegInit_Unmasked8BitsSingleType Port_kt_RegisterTable[PORT_NUMBER_OF_REGISTERS] =
 {
+	/*
+	 *		MCU CONTROL REGISTER
+	 *		Bit 4 – PUD: Pull-up Disable
+	 *		When this bit is written to one, the pull-ups in the I/O ports are disabled even if the DDxn and
+	 *		PORTxn Registers are configured to enable the pull-ups ({DDxn, PORTxn} = 0b01).
+	 *				
+	 */
 	{
-		&PORTD,
+		&MCUCR,
 		0x00,
 	},
+	
+	/*		DATA DIRECTION REGISTER FOR PORT B		
+	 *		1 - OUTPUT
+	 *		0 - INPUT
+	 *
+	 */
+	{
+		&DDRB,
+		0x00,
+	},
+	
+	/*		DATA DIRECTION REGISTER FOR PORT c		
+	 *		1 - OUTPUT
+	 *		0 - INPUT
+	 *
+	 */
+	{
+		&DDRC,
+		0x00,
+	},
+	
+	/*		DATA DIRECTION REGISTER FOR PORT d		
+	 *		1 - OUTPUT
+	 *		0 - INPUT
+	 *
+	 */
+	{
+		&DDRD,
+		0x00,
+	},
+	
 	
 };
 

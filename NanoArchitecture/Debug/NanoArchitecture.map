@@ -12,6 +12,18 @@ Discarded input sections
  .text          0x00000000        0x0 02_RTE/main.o
  .data          0x00000000        0x0 02_RTE/main.o
  .bss           0x00000000        0x0 02_RTE/main.o
+ .text          0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .data          0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .bss           0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .debug_line    0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .debug_str     0x00000000      0x111 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .comment       0x00000000       0x31 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .text          0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
+ .data          0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
+ .bss           0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_line    0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_str     0x00000000      0x10d 05_MCAL/Dio/Code/Generic/Dio.o
+ .comment       0x00000000       0x31 05_MCAL/Dio/Code/Generic/Dio.o
  .text          0x00000000        0x0 05_MCAL/Port/Config/Port_PBCfg.o
  .data          0x00000000        0x0 05_MCAL/Port/Config/Port_PBCfg.o
  .bss           0x00000000        0x0 05_MCAL/Port/Config/Port_PBCfg.o
@@ -77,6 +89,8 @@ Linker script and memory map
 Address of section .data set to 0x800100
 LOAD D:/Programe/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
 LOAD 02_RTE/main.o
+LOAD 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+LOAD 05_MCAL/Dio/Code/Generic/Dio.o
 LOAD 05_MCAL/Port/Config/Port_PBCfg.o
 LOAD 05_MCAL/Port/Generic/Port.o
 LOAD 07_Libraries/RegisterInit/Generic/RegisterInit.o
