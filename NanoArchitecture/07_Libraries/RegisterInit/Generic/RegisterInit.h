@@ -23,6 +23,7 @@
 /** \brief  Defines a configuration for a single 8-bits register. */
 typedef struct
 {
+	/* volatile - do not optimize the reference, do a real memory access */
 	volatile uint8* puc_Register;
 	uint8 uc_Value;
 } RegInit_Unmasked8BitsSingleType;

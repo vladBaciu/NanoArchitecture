@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               D:/Programe/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                              05_MCAL/Port/Code/Config/Port_PBCfg.o (__do_copy_data)
+                              05_MCAL/Dio/Code/Config/Dio_LCfg.o (__do_copy_data)
 
 Discarded input sections
 
@@ -15,15 +15,40 @@ Discarded input sections
  .text          0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
  .data          0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
  .bss           0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
- .debug_line    0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
- .debug_str     0x00000000      0x111 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .rodata.Dio_gkat_ChannelCfg
+                0x00000000       0x3c 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .rodata.Dio_gkat_PortAdressRead
+                0x00000000        0x6 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .rodata.Dio_gkat_PortAdressWrite
+                0x00000000        0x6 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .debug_info    0x00000000      0x158 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .debug_abbrev  0x00000000       0x89 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .debug_aranges
+                0x00000000       0x18 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .debug_line    0x00000000       0xf3 05_MCAL/Dio/Code/Config/Dio_LCfg.o
+ .debug_str     0x00000000      0x23d 05_MCAL/Dio/Code/Config/Dio_LCfg.o
  .comment       0x00000000       0x31 05_MCAL/Dio/Code/Config/Dio_LCfg.o
  .text          0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
  .data          0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
  .bss           0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
- .debug_line    0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
- .debug_str     0x00000000      0x10d 05_MCAL/Dio/Code/Generic/Dio.o
+ .text.Dio_ReadChannel
+                0x00000000        0x4 05_MCAL/Dio/Code/Generic/Dio.o
+ .text.Dio_WriteChannel
+                0x00000000        0x2 05_MCAL/Dio/Code/Generic/Dio.o
+ .text.Dio_ReadPort
+                0x00000000       0x16 05_MCAL/Dio/Code/Generic/Dio.o
+ .text.Dio_WritePort
+                0x00000000       0x24 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_info    0x00000000      0x212 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_abbrev  0x00000000      0x13e 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_loc     0x00000000       0x84 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_aranges
+                0x00000000       0x38 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_ranges  0x00000000       0x28 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_line    0x00000000       0xde 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_str     0x00000000      0x28b 05_MCAL/Dio/Code/Generic/Dio.o
  .comment       0x00000000       0x31 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_frame   0x00000000       0x54 05_MCAL/Dio/Code/Generic/Dio.o
  .text          0x00000000        0x0 05_MCAL/Port/Code/Config/Port_PBCfg.o
  .data          0x00000000        0x0 05_MCAL/Port/Code/Config/Port_PBCfg.o
  .bss           0x00000000        0x0 05_MCAL/Port/Code/Config/Port_PBCfg.o

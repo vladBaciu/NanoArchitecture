@@ -132,6 +132,9 @@
       <Value>../05_MCAL/Port/Generic</Value>
       <Value>../05_MCAL/Port/Code/Config</Value>
       <Value>../05_MCAL/Port/Code/Generic</Value>
+      <Value>../05_MCAL/Port</Value>
+      <Value>../05_MCAL/Dio/Code/Generic</Value>
+      <Value>../05_MCAL/Dio/Code/Config</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
