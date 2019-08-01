@@ -32,21 +32,21 @@ Discarded input sections
  .data          0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
  .bss           0x00000000        0x0 05_MCAL/Dio/Code/Generic/Dio.o
  .text.Dio_ReadChannel
-                0x00000000        0x4 05_MCAL/Dio/Code/Generic/Dio.o
+                0x00000000       0x2c 05_MCAL/Dio/Code/Generic/Dio.o
  .text.Dio_WriteChannel
-                0x00000000        0x2 05_MCAL/Dio/Code/Generic/Dio.o
+                0x00000000       0x46 05_MCAL/Dio/Code/Generic/Dio.o
  .text.Dio_ReadPort
                 0x00000000       0x16 05_MCAL/Dio/Code/Generic/Dio.o
  .text.Dio_WritePort
                 0x00000000       0x24 05_MCAL/Dio/Code/Generic/Dio.o
- .debug_info    0x00000000      0x212 05_MCAL/Dio/Code/Generic/Dio.o
- .debug_abbrev  0x00000000      0x13e 05_MCAL/Dio/Code/Generic/Dio.o
- .debug_loc     0x00000000       0x84 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_info    0x00000000      0x2b4 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_abbrev  0x00000000      0x14d 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_loc     0x00000000      0x12b 05_MCAL/Dio/Code/Generic/Dio.o
  .debug_aranges
                 0x00000000       0x38 05_MCAL/Dio/Code/Generic/Dio.o
  .debug_ranges  0x00000000       0x28 05_MCAL/Dio/Code/Generic/Dio.o
- .debug_line    0x00000000       0xde 05_MCAL/Dio/Code/Generic/Dio.o
- .debug_str     0x00000000      0x28b 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_line    0x00000000      0x10e 05_MCAL/Dio/Code/Generic/Dio.o
+ .debug_str     0x00000000      0x2f0 05_MCAL/Dio/Code/Generic/Dio.o
  .comment       0x00000000       0x31 05_MCAL/Dio/Code/Generic/Dio.o
  .debug_frame   0x00000000       0x54 05_MCAL/Dio/Code/Generic/Dio.o
  .text          0x00000000        0x0 05_MCAL/Port/Code/Config/Port_PBCfg.o
