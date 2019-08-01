@@ -17,7 +17,8 @@
  ../07_Libraries/Std/Generic/Code/Std_Types.h \
  ../07_Libraries/Std/Generic/Code/Platform_Types.h \
  ../07_Libraries/Std/Generic/Code/Compiler.h \
- ../07_Libraries/RegisterInit/Generic/RegisterInit.h
+ ../07_Libraries/RegisterInit/Generic/RegisterInit.h \
+ ../05_MCAL/Dio/Code/Generic/Dio.h ../05_MCAL/Dio/Code/Config/Dio_Cfg.h
 
 d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -56,3 +57,7 @@ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
 ../07_Libraries/Std/Generic/Code/Compiler.h:
 
 ../07_Libraries/RegisterInit/Generic/RegisterInit.h:
+
+../05_MCAL/Dio/Code/Generic/Dio.h:
+
+../05_MCAL/Dio/Code/Config/Dio_Cfg.h:

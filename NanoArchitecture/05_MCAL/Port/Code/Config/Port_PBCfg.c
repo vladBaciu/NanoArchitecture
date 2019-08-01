@@ -40,44 +40,44 @@
 static const RegInit_Unmasked8BitsSingleType Port_kt_RegisterTable[PORT_NUMBER_OF_REGISTERS] =
 {
 	/*
-	 *		MCU CONTROL REGISTER
-	 *		Bit 4 – PUD: Pull-up Disable
-	 *		When this bit is written to one, the pull-ups in the I/O ports are disabled even if the DDxn and
-	 *		PORTxn Registers are configured to enable the pull-ups ({DDxn, PORTxn} = 0b01).
-	 *				
-	 */
+	*		MCU CONTROL REGISTER
+	*		Bit 4 – PUD: Pull-up Disable
+	*		When this bit is written to one, the pull-ups in the I/O ports are disabled even if the DDxn and
+	*		PORTxn Registers are configured to enable the pull-ups ({DDxn, PORTxn} = 0b01).
+	*
+	*/
 	{
-		&MCUCR,
+		(volatile uint8 *) &MCUCR,
 		0x00,
 	},
 	
-	/*		DATA DIRECTION REGISTER FOR PORT B		
-	 *		1 - OUTPUT
-	 *		0 - INPUT
-	 *
-	 */
+	/*		DATA DIRECTION REGISTER FOR PORT B
+	*		1 - OUTPUT
+	*		0 - INPUT
+	*
+	*/
 	{
-		&DDRB,
+		(volatile uint8 *) &DDRB,
 		0x00,
 	},
 	
-	/*		DATA DIRECTION REGISTER FOR PORT c		
-	 *		1 - OUTPUT
-	 *		0 - INPUT
-	 *
-	 */
+	/*		DATA DIRECTION REGISTER FOR PORT c
+	*		1 - OUTPUT
+	*		0 - INPUT
+	*
+	*/
 	{
-		&DDRC,
+		(volatile uint8 *) &DDRC,
 		0x00,
 	},
 	
-	/*		DATA DIRECTION REGISTER FOR PORT d		
-	 *		1 - OUTPUT
-	 *		0 - INPUT
-	 *
-	 */
+	/*		DATA DIRECTION REGISTER FOR PORT d
+	*		1 - OUTPUT
+	*		0 - INPUT
+	*
+	*/
 	{
-		&DDRD,
+		(volatile uint8 *) &DDRD,
 		0x00,
 	},
 	

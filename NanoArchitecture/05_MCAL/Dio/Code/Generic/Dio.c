@@ -110,6 +110,5 @@ void Dio_WritePort(Dio_PortType PortId, Dio_PortLevelType Level)
 	uc_PortValue = Level & uc_PortValue;
 	uc_PortValue = Level | uc_PortValue;
 	
-	
 	*Dio_gkat_PortAdressWrite[PortId].pt_Registers = uc_PortValue;
 }
