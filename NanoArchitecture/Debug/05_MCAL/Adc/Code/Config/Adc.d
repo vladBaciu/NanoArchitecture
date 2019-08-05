@@ -1,4 +1,10 @@
-02_RTE/main.d 02_RTE/main.o: ../02_RTE/main.c \
+05_MCAL/Adc/Code/Config/Adc.d 05_MCAL/Adc/Code/Config/Adc.o: \
+ ../05_MCAL/Adc/Code/Config/Adc.c ../05_MCAL/Adc/Code/Config/Adc.h \
+ ../07_Libraries/Std/Generic/Code/Std_Types.h \
+ ../07_Libraries/Std/Generic/Code/Platform_Types.h \
+ ../07_Libraries/Std/Generic/Code/Compiler.h \
+ ../07_Libraries/RegisterInit/Generic/RegisterInit.h \
+ ../05_MCAL/Adc/Code/Generic/Adc_Cfg.h ../05_MCAL/Adc/Code/Config/Adc.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -9,17 +15,21 @@
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
- d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
- d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../05_MCAL/Port/Code/Generic/Port.h \
- ../07_Libraries/Std/Generic/Code/Std_Types.h \
- ../07_Libraries/Std/Generic/Code/Platform_Types.h \
- ../07_Libraries/Std/Generic/Code/Compiler.h \
- ../07_Libraries/RegisterInit/Generic/RegisterInit.h \
- ../05_MCAL/Dio/Code/Generic/Dio.h ../05_MCAL/Dio/Code/Config/Dio_Cfg.h \
- ../05_MCAL/Adc/Code/Config/Adc.h ../05_MCAL/Adc/Code/Generic/Adc_Cfg.h
+ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h
+
+../05_MCAL/Adc/Code/Config/Adc.h:
+
+../07_Libraries/Std/Generic/Code/Std_Types.h:
+
+../07_Libraries/Std/Generic/Code/Platform_Types.h:
+
+../07_Libraries/Std/Generic/Code/Compiler.h:
+
+../07_Libraries/RegisterInit/Generic/RegisterInit.h:
+
+../05_MCAL/Adc/Code/Generic/Adc_Cfg.h:
+
+../05_MCAL/Adc/Code/Config/Adc.h:
 
 d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -42,27 +52,3 @@ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\ve
 d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h:
 
 d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
-
-d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
-
-d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
-
-d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
-
-../05_MCAL/Port/Code/Generic/Port.h:
-
-../07_Libraries/Std/Generic/Code/Std_Types.h:
-
-../07_Libraries/Std/Generic/Code/Platform_Types.h:
-
-../07_Libraries/Std/Generic/Code/Compiler.h:
-
-../07_Libraries/RegisterInit/Generic/RegisterInit.h:
-
-../05_MCAL/Dio/Code/Generic/Dio.h:
-
-../05_MCAL/Dio/Code/Config/Dio_Cfg.h:
-
-../05_MCAL/Adc/Code/Config/Adc.h:
-
-../05_MCAL/Adc/Code/Generic/Adc_Cfg.h:

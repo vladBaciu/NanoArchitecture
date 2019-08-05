@@ -10,6 +10,8 @@
 #include <util/delay.h>
 #include "Port.h"
 #include "Dio.h"
+#include "Adc.h"
+
 int main(void)
 {
 DDRD |= 0xFF;// setting the pin PD3 as output

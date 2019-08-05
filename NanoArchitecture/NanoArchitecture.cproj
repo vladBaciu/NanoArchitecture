@@ -135,6 +135,9 @@
       <Value>../05_MCAL/Port</Value>
       <Value>../05_MCAL/Dio/Code/Generic</Value>
       <Value>../05_MCAL/Dio/Code/Config</Value>
+      <Value>../05_MCAL/Adc/Code/Config</Value>
+      <Value>../05_MCAL/Adc/Code/Generic</Value>
+      <Value>../06_ComplexDrivers/Uart</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -164,6 +167,18 @@
     <Compile Include="02_RTE\main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="05_MCAL\Adc\Code\Config\Adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="05_MCAL\Adc\Code\Config\Adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="05_MCAL\Adc\Code\Generic\Adc_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="05_MCAL\Adc\Code\Generic\Adc_PBCfg.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="05_MCAL\Dio\Code\Config\Dio_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
@@ -183,6 +198,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="05_MCAL\Port\Code\Generic\Port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="06_ComplexDrivers\Uart\Uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="06_ComplexDrivers\Uart\Uart.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="07_Libraries\RegisterInit\Generic\RegisterInit.c">
@@ -223,17 +244,23 @@
     <Folder Include="04_EcuAbstraction\Code" />
     <Folder Include="04_EcuAbstraction\Info" />
     <Folder Include="05_MCAL" />
+    <Folder Include="05_MCAL\Adc\Code" />
+    <Folder Include="05_MCAL\Adc\Code\Generic" />
+    <Folder Include="05_MCAL\Adc\Code\Config" />
+    <Folder Include="05_MCAL\Adc\Info" />
     <Folder Include="05_MCAL\Dio" />
     <Folder Include="05_MCAL\Dio\Code\Config\" />
     <Folder Include="05_MCAL\Dio\Code\Generic\" />
     <Folder Include="05_MCAL\Dio\Code" />
     <Folder Include="05_MCAL\Dio\Info" />
+    <Folder Include="05_MCAL\Adc" />
     <Folder Include="05_MCAL\Port" />
     <Folder Include="05_MCAL\Port\Code\Config\" />
     <Folder Include="05_MCAL\Port\Code\Generic\" />
     <Folder Include="05_MCAL\Port\Code" />
     <Folder Include="05_MCAL\Port\Info" />
     <Folder Include="06_ComplexDrivers" />
+    <Folder Include="06_ComplexDrivers\Uart" />
     <Folder Include="07_Libraries" />
     <Folder Include="07_Libraries\Std" />
     <Folder Include="07_Libraries\RegisterInit" />

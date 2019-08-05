@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               D:/Programe/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
 d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                              05_MCAL/Dio/Code/Config/Dio_LCfg.o (__do_copy_data)
+                              05_MCAL/Adc/Code/Generic/Adc_PBCfg.o (__do_copy_data)
 
 Discarded input sections
 
@@ -12,6 +12,45 @@ Discarded input sections
  .text          0x00000000        0x0 02_RTE/main.o
  .data          0x00000000        0x0 02_RTE/main.o
  .bss           0x00000000        0x0 02_RTE/main.o
+ .text          0x00000000        0x0 05_MCAL/Adc/Code/Config/Adc.o
+ .data          0x00000000        0x0 05_MCAL/Adc/Code/Config/Adc.o
+ .bss           0x00000000        0x0 05_MCAL/Adc/Code/Config/Adc.o
+ .text.Adc_Init
+                0x00000000        0xc 05_MCAL/Adc/Code/Config/Adc.o
+ .text.Adc_StartGroupConversion
+                0x00000000        0x2 05_MCAL/Adc/Code/Config/Adc.o
+ .text.Adc_GetGroupStatus
+                0x00000000        0x4 05_MCAL/Adc/Code/Config/Adc.o
+ .text.Adc_SetupResultBuffer
+                0x00000000        0x4 05_MCAL/Adc/Code/Config/Adc.o
+ .debug_info    0x00000000      0x2f4 05_MCAL/Adc/Code/Config/Adc.o
+ .debug_abbrev  0x00000000      0x123 05_MCAL/Adc/Code/Config/Adc.o
+ .debug_loc     0x00000000       0x78 05_MCAL/Adc/Code/Config/Adc.o
+ .debug_aranges
+                0x00000000       0x38 05_MCAL/Adc/Code/Config/Adc.o
+ .debug_ranges  0x00000000       0x28 05_MCAL/Adc/Code/Config/Adc.o
+ .debug_line    0x00000000      0x117 05_MCAL/Adc/Code/Config/Adc.o
+ .debug_str     0x00000000      0x39f 05_MCAL/Adc/Code/Config/Adc.o
+ .comment       0x00000000       0x31 05_MCAL/Adc/Code/Config/Adc.o
+ .debug_frame   0x00000000       0x54 05_MCAL/Adc/Code/Config/Adc.o
+ .text          0x00000000        0x0 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .data          0x00000000        0x0 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .bss           0x00000000        0x0 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .rodata.Adc_gkt_Cfg
+                0x00000000        0x4 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .rodata.Adc_kt_Config
+                0x00000000        0x4 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .rodata.Adc_kat_Registers
+                0x00000000       0x24 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .rodata.Adc_kat_AdcGroups
+                0x00000000        0xf 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .debug_info    0x00000000      0x1f7 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .debug_abbrev  0x00000000       0x98 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .debug_aranges
+                0x00000000       0x18 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .debug_line    0x00000000      0x12b 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .debug_str     0x00000000      0x2ce 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
+ .comment       0x00000000       0x31 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
  .text          0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
  .data          0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
  .bss           0x00000000        0x0 05_MCAL/Dio/Code/Config/Dio_LCfg.o
@@ -32,6 +71,12 @@ Discarded input sections
  .text          0x00000000        0x0 05_MCAL/Port/Code/Generic/Port.o
  .data          0x00000000        0x0 05_MCAL/Port/Code/Generic/Port.o
  .bss           0x00000000        0x0 05_MCAL/Port/Code/Generic/Port.o
+ .text          0x00000000        0x0 06_ComplexDrivers/Uart/Uart.o
+ .data          0x00000000        0x0 06_ComplexDrivers/Uart/Uart.o
+ .bss           0x00000000        0x0 06_ComplexDrivers/Uart/Uart.o
+ .debug_line    0x00000000        0x0 06_ComplexDrivers/Uart/Uart.o
+ .debug_str     0x00000000      0x10c 06_ComplexDrivers/Uart/Uart.o
+ .comment       0x00000000       0x31 06_ComplexDrivers/Uart/Uart.o
  .text          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .data          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .bss           0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
@@ -91,10 +136,13 @@ Linker script and memory map
 Address of section .data set to 0x800100
 LOAD D:/Programe/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
 LOAD 02_RTE/main.o
+LOAD 05_MCAL/Adc/Code/Config/Adc.o
+LOAD 05_MCAL/Adc/Code/Generic/Adc_PBCfg.o
 LOAD 05_MCAL/Dio/Code/Config/Dio_LCfg.o
 LOAD 05_MCAL/Dio/Code/Generic/Dio.o
 LOAD 05_MCAL/Port/Code/Config/Port_PBCfg.o
 LOAD 05_MCAL/Port/Code/Generic/Port.o
+LOAD 06_ComplexDrivers/Uart/Uart.o
 LOAD 07_Libraries/RegisterInit/Generic/RegisterInit.o
 START GROUP
 LOAD d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
