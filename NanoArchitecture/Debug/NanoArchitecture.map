@@ -71,12 +71,47 @@ Discarded input sections
  .text          0x00000000        0x0 05_MCAL/Port/Code/Generic/Port.o
  .data          0x00000000        0x0 05_MCAL/Port/Code/Generic/Port.o
  .bss           0x00000000        0x0 05_MCAL/Port/Code/Generic/Port.o
- .text          0x00000000        0x0 06_ComplexDrivers/Uart/Uart.o
- .data          0x00000000        0x0 06_ComplexDrivers/Uart/Uart.o
- .bss           0x00000000        0x0 06_ComplexDrivers/Uart/Uart.o
- .debug_line    0x00000000        0x0 06_ComplexDrivers/Uart/Uart.o
- .debug_str     0x00000000      0x10c 06_ComplexDrivers/Uart/Uart.o
- .comment       0x00000000       0x31 06_ComplexDrivers/Uart/Uart.o
+ .text          0x00000000        0x0 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .data          0x00000000        0x0 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .bss           0x00000000        0x0 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .rodata.Uart_gkt_Cfg
+                0x00000000        0x4 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .rodata.Uart_kt_Config
+                0x00000000        0x4 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .rodata.Uart_kat_Registers
+                0x00000000       0x28 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .rodata.Uart_gkt_UartGroups
+                0x00000000        0x6 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .debug_info    0x00000000      0x200 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .debug_abbrev  0x00000000       0x98 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .debug_aranges
+                0x00000000       0x18 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .debug_line    0x00000000       0xe3 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .debug_str     0x00000000      0x2e3 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .comment       0x00000000       0x31 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .text          0x00000000        0x0 06_ComplexDrivers/Uart/Generic/Uart.o
+ .data          0x00000000        0x0 06_ComplexDrivers/Uart/Generic/Uart.o
+ .bss           0x00000000        0x0 06_ComplexDrivers/Uart/Generic/Uart.o
+ .text.Uart_gv_Init
+                0x00000000        0xc 06_ComplexDrivers/Uart/Generic/Uart.o
+ .text.Uart_gt_GetTransmitStatus
+                0x00000000        0x4 06_ComplexDrivers/Uart/Generic/Uart.o
+ .text.Uart_gv_Transmit
+                0x00000000        0x2 06_ComplexDrivers/Uart/Generic/Uart.o
+ .text.Uart_gt_GetReceiveStatus
+                0x00000000        0x4 06_ComplexDrivers/Uart/Generic/Uart.o
+ .text.Uart_gv_Receive
+                0x00000000        0x2 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_info    0x00000000      0x31b 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_abbrev  0x00000000      0x102 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_loc     0x00000000       0x78 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_aranges
+                0x00000000       0x40 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_ranges  0x00000000       0x30 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_line    0x00000000      0x122 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_str     0x00000000      0x3c1 06_ComplexDrivers/Uart/Generic/Uart.o
+ .comment       0x00000000       0x31 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_frame   0x00000000       0x64 06_ComplexDrivers/Uart/Generic/Uart.o
  .text          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .data          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .bss           0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
@@ -142,7 +177,8 @@ LOAD 05_MCAL/Dio/Code/Config/Dio_LCfg.o
 LOAD 05_MCAL/Dio/Code/Generic/Dio.o
 LOAD 05_MCAL/Port/Code/Config/Port_PBCfg.o
 LOAD 05_MCAL/Port/Code/Generic/Port.o
-LOAD 06_ComplexDrivers/Uart/Uart.o
+LOAD 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+LOAD 06_ComplexDrivers/Uart/Generic/Uart.o
 LOAD 07_Libraries/RegisterInit/Generic/RegisterInit.o
 START GROUP
 LOAD d:/programe/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a

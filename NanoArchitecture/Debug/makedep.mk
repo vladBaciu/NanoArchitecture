@@ -16,7 +16,9 @@
 
 05_MCAL\Port\Code\Generic\Port.c
 
-06_ComplexDrivers\Uart\Uart.c
+06_ComplexDrivers\Uart\Config\Uart_PBCfg.c
+
+06_ComplexDrivers\Uart\Generic\Uart.c
 
 07_Libraries\RegisterInit\Generic\RegisterInit.c
 

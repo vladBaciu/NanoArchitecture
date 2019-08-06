@@ -138,6 +138,8 @@
       <Value>../05_MCAL/Adc/Code/Config</Value>
       <Value>../05_MCAL/Adc/Code/Generic</Value>
       <Value>../06_ComplexDrivers/Uart</Value>
+      <Value>../06_ComplexDrivers/Uart/Config</Value>
+      <Value>../06_ComplexDrivers/Uart/Generic</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -200,10 +202,16 @@
     <Compile Include="05_MCAL\Port\Code\Generic\Port.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="06_ComplexDrivers\Uart\Uart.c">
+    <Compile Include="06_ComplexDrivers\Uart\Config\Uart_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="06_ComplexDrivers\Uart\Uart.h">
+    <Compile Include="06_ComplexDrivers\Uart\Config\Uart_PBCfg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="06_ComplexDrivers\Uart\Generic\Uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="06_ComplexDrivers\Uart\Generic\Uart.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="07_Libraries\RegisterInit\Generic\RegisterInit.c">
@@ -261,6 +269,8 @@
     <Folder Include="05_MCAL\Port\Info" />
     <Folder Include="06_ComplexDrivers" />
     <Folder Include="06_ComplexDrivers\Uart" />
+    <Folder Include="06_ComplexDrivers\Uart\Config" />
+    <Folder Include="06_ComplexDrivers\Uart\Generic" />
     <Folder Include="07_Libraries" />
     <Folder Include="07_Libraries\Std" />
     <Folder Include="07_Libraries\RegisterInit" />
