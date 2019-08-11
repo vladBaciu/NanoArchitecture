@@ -21,9 +21,9 @@
 
 #define UART_RECEIVE_API                     (STD_ON)
 
-#define UART_FCPU							 (1U)
+#define UART_FCPU							 (16000000L)
 
-#define UART_BAUD_RATE						 (1U)
+#define UART_BAUD_RATE						 (9600U)
 
 #define UART_UBRR_REGISTER					 (UART_FCPU/16/UART_BAUD_RATE-1)
 
