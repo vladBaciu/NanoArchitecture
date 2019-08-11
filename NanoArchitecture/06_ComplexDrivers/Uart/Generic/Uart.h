@@ -46,7 +46,7 @@ typedef uint8 Uart_ChannelType;
 typedef struct
 {
    Uart_ChannelType t_Channel;
-   uint8 * pt_Registers[NUMBER_OF_UART_REGISTERS];
+   volatile uint8  *pt_Registers[NUMBER_OF_UART_REGISTERS];
 } Uart_GroupCfgType;
 
 typedef struct

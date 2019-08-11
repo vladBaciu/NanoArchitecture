@@ -1,9 +1,9 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 /**
- *    \file       Uart_PBcfg.c
- *    \author     Baciu Vlad-Eusebiu
- *    \brief      Implements the configuration array, register configuration array and the global configuration array.
- */
+*    \file       Uart_PBcfg.c
+*    \author     Baciu Vlad-Eusebiu
+*    \brief      Implements the configuration array, register configuration array and the global configuration array.
+*/
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -35,29 +35,57 @@
 /** \brief Group configuration array */
 static const Uart_GroupCfgType Uart_gkt_UartGroups[UART_NUMBER_OF_GROUPS] =
 {
-
-
+	{ UART_TX_D_1 , {(volatile uint8*) &UCSR0A, (volatile uint8*) &UDR0 }},
+	{ UART_RX_D_0 , {(volatile uint8*) &UCSR0A, (volatile uint8*) &UDR0 }}
 };
 
 /** \brief Register configuration array */
 static const RegInit_Masked8BitsSingleType Uart_kat_Registers[UART_NUMBER_OF_REGISTERS] =
 {
-  
+	{
+		(volatile uint8*) &UBRR0H,
+		~(UART_UBBRH_REGISTER),
+		UART_UBBRH_REGISTER
+	},
+	{
+		(volatile uint8*) &UBRR0L,
+		~(UART_UBRR_REGISTER),
+		UART_UBRR_REGISTER
+	},
+	{
+		(volatile uint8*) &UCSR0B ,
+		~(UART_ENABLE_RX |
+		UART_ENABLE_TX),
+		UART_ENABLE_RX |
+		UART_ENABLE_TX
+	},
+	
+	{
+		(volatile uint8*) &UCSR0C  ,
+		~(UART_NO_BITS),
+		UART_NO_BITS|
+		UART_STOP_BITS
+	},
+	{
+		(volatile uint8*) &UCSR0B   ,
+		~(UART_RX_INTERRUPT),
+		UART_RX_INTERRUPT
+	},
 };
 
 /** \brief UART register configuration array */
 static const RegInit_Masked8BitsConfigType Uart_kt_Config =
 {
-   Uart_kat_Registers,
-   UART_NUMBER_OF_REGISTERS
+	Uart_kat_Registers,
+	UART_NUMBER_OF_REGISTERS
 };
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                          Declaration Of Global Constants                                          */
 /*-------------------------------------------------------------------------------------------------------------------*/
 const Uart_ConfigType Uart_gkt_Cfg =
 {
-   Uart_gkt_UartGroups,
-   &Uart_kt_Config
+	Uart_gkt_UartGroups,
+	&Uart_kt_Config
 };
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                           Declaration Of Local Functions                                          */

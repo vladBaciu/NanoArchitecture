@@ -84,12 +84,12 @@ Discarded input sections
                 0x00000000       0x28 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
  .rodata.Uart_gkt_UartGroups
                 0x00000000       0x2a 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
- .debug_info    0x00000000      0x210 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .debug_info    0x00000000      0x215 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
  .debug_abbrev  0x00000000       0x98 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
  .debug_aranges
                 0x00000000       0x18 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
- .debug_line    0x00000000       0xe3 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
- .debug_str     0x00000000      0x2e3 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .debug_line    0x00000000      0x139 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
+ .debug_str     0x00000000      0x2eb 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
  .comment       0x00000000       0x31 06_ComplexDrivers/Uart/Config/Uart_PBCfg.o
  .text          0x00000000        0x0 06_ComplexDrivers/Uart/Generic/Uart.o
  .data          0x00000000        0x0 06_ComplexDrivers/Uart/Generic/Uart.o
@@ -99,23 +99,23 @@ Discarded input sections
  .text.Uart_gt_GetTransmitStatus
                 0x00000000       0x24 06_ComplexDrivers/Uart/Generic/Uart.o
  .text.Uart_gv_Transmit
-                0x00000000       0x28 06_ComplexDrivers/Uart/Generic/Uart.o
+                0x00000000       0x30 06_ComplexDrivers/Uart/Generic/Uart.o
  .text.Uart_gt_GetReceiveStatus
                 0x00000000       0x24 06_ComplexDrivers/Uart/Generic/Uart.o
  .text.Uart_gv_Receive
-                0x00000000       0x38 06_ComplexDrivers/Uart/Generic/Uart.o
+                0x00000000       0x3a 06_ComplexDrivers/Uart/Generic/Uart.o
  .bss.Uart_pt_GroupsConfig
                 0x00000000        0x2 06_ComplexDrivers/Uart/Generic/Uart.o
- .debug_info    0x00000000      0x37d 06_ComplexDrivers/Uart/Generic/Uart.o
- .debug_abbrev  0x00000000      0x147 06_ComplexDrivers/Uart/Generic/Uart.o
- .debug_loc     0x00000000      0x2bc 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_info    0x00000000      0x37c 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_abbrev  0x00000000      0x12d 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_loc     0x00000000      0x216 06_ComplexDrivers/Uart/Generic/Uart.o
  .debug_aranges
                 0x00000000       0x40 06_ComplexDrivers/Uart/Generic/Uart.o
  .debug_ranges  0x00000000       0x30 06_ComplexDrivers/Uart/Generic/Uart.o
- .debug_line    0x00000000      0x182 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_line    0x00000000      0x166 06_ComplexDrivers/Uart/Generic/Uart.o
  .debug_str     0x00000000      0x3dc 06_ComplexDrivers/Uart/Generic/Uart.o
  .comment       0x00000000       0x31 06_ComplexDrivers/Uart/Generic/Uart.o
- .debug_frame   0x00000000       0x80 06_ComplexDrivers/Uart/Generic/Uart.o
+ .debug_frame   0x00000000       0x88 06_ComplexDrivers/Uart/Generic/Uart.o
  .text          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .data          0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
  .bss           0x00000000        0x0 07_Libraries/RegisterInit/Generic/RegisterInit.o
