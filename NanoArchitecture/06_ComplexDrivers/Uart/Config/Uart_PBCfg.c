@@ -44,32 +44,33 @@ static const RegInit_Masked8BitsSingleType Uart_kat_Registers[UART_NUMBER_OF_REG
 {
 	{
 		(volatile uint8*) &UBRR0H,
-		~(UART_UBBRH_REGISTER),
-		UART_UBBRH_REGISTER
+		(uint8) ~(UART_UBRRH_REGISTER),
+		(uint8)  UART_UBRRH_REGISTER
 	},
 	{
 		(volatile uint8*) &UBRR0L,
-		~(UART_UBRR_REGISTER),
-		UART_UBRR_REGISTER
+		(uint8) ~(UART_UBRRL_REGISTER),
+		(uint8) UART_UBRRL_REGISTER
 	},
 	{
 		(volatile uint8*) &UCSR0B ,
-		~(UART_ENABLE_RX |
-		UART_ENABLE_TX),
-		UART_ENABLE_RX |
-		UART_ENABLE_TX
+		(uint8) ~(UART_ENABLE_RX |
+		  UART_ENABLE_TX),
+		(uint8) (UART_ENABLE_RX |
+		  UART_ENABLE_TX)
 	},
 	
 	{
 		(volatile uint8*) &UCSR0C  ,
-		~(UART_NO_BITS),
-		UART_NO_BITS|
-		UART_STOP_BITS
+		(uint8) ~(UART_NO_BITS |
+		UART_STOP_BITS),
+		(uint8) (UART_NO_BITS |
+		UART_STOP_BITS)
 	},
 	{
 		(volatile uint8*) &UCSR0B   ,
-		~(UART_RX_INTERRUPT),
-		UART_RX_INTERRUPT
+		(uint8) ~(UART_RX_INTERRUPT),
+		(uint8)  0x00
 	},
 };
 
