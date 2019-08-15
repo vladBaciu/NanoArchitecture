@@ -18,6 +18,9 @@
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
+ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h \
+ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
+ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  ../06_ComplexDrivers/Uart/Config/Uart_Cfg.h
 
 ../06_ComplexDrivers/Uart/Generic/Uart.h:
@@ -53,5 +56,11 @@ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\ve
 d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h:
 
 d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
+
+d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
+
+d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h:
+
+d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h:
 
 ../06_ComplexDrivers/Uart/Config/Uart_Cfg.h:

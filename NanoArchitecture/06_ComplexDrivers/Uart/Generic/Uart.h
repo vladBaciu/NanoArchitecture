@@ -16,7 +16,9 @@
 #include "Std_Types.h"
 #include "RegisterInit.h"
 #include "Uart_Cfg.h"
+
 #include <avr/io.h>
+#include <stdio.h>
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                            Definition Of Global Macros                                            */
@@ -38,6 +40,13 @@ typedef enum
    UART_RX_NO_DATA,
    UART_RX_READY
 } Uart_RxStatusType;
+
+/** \brief Status types for data register  */
+typedef enum
+{
+	UART_DATA_REG_EMPTY,
+	UART_DATA_REG_NOT_EMPTY
+} Uart_DataRegisterStatusType;
 
 /** \brief Uart channel type */
 typedef uint8 Uart_ChannelType;
@@ -68,7 +77,14 @@ extern const Uart_ConfigType Uart_gkt_Cfg;
 extern void Uart_gv_Init(const Uart_ConfigType * pt_Config);
 extern Uart_TxStatusType Uart_gt_GetTransmitStatus(Uart_ChannelType t_ChannelId);
 extern Uart_RxStatusType Uart_gt_GetReceiveStatus(Uart_ChannelType t_ChannelId);
+extern Uart_DataRegisterStatusType Uart_gt_DataRegisterStatus(Uart_ChannelType t_ChannelId);
 extern void Uart_gv_Transmit(Uart_ChannelType t_ChannelId, uint8 * puc_TransmitAddr);
 extern void Uart_gv_Receive(Uart_ChannelType t_ChannelId, uint8 * puc_ReceiveAddr);
+
+extern void Uart_gv_TransmitString_CH_0(char uc_Byte , FILE * pt_Stream);
+
 /*-------------------------------------------------------------------------------------------------------------------*/
+
+
+
 #endif /* UART_H */

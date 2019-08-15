@@ -16,11 +16,12 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                             Definition Of Local Macros                                            */
 /*-------------------------------------------------------------------------------------------------------------------*/
+#define UART_DATA_REGISTER_EMPTY_BIT			    (1<<5)
 #define UART_TX_STATUS_BIT			    (1<<6)
 #define UART_RX_STATUS_BIT			    (1<<7)
 #define UART_STATUS_REGISTER			(0U)
 #define UART_RECEIVE_REGISTER			(1U)
-#define UART_TRANSMIT_REGISTER			(2U)
+#define UART_TRANSMIT_REGISTER			(1U)
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                           Definition Of Local Data Types                                          */
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -76,7 +77,7 @@ Uart_TxStatusType Uart_gt_GetTransmitStatus(Uart_ChannelType t_ChannelId)
 	Uart_TxStatusType t_ReturnValue;
 	uint8 uc_StatusRegister;
 	uc_StatusRegister = (uint8) *Uart_pt_GroupsConfig[t_ChannelId].pt_Registers[UART_STATUS_REGISTER];
-	if((uc_StatusRegister & UART_TX_STATUS_BIT) !=0)
+	if((uc_StatusRegister & UART_TX_STATUS_BIT) != 0)
 	{
 		t_ReturnValue = UART_TX_READY;
 		
@@ -103,6 +104,36 @@ void Uart_gv_Transmit(Uart_ChannelType t_ChannelId, uint8 * puc_TransmitAddr)
  };
 }
 #endif
+
+
+/**
+* \brief   Reads the transmision register status.
+* \param   t_ChannelId: index of UART channel in the configuration array
+* \return  The status of transmit operation: ready or busy.
+*/
+Uart_DataRegisterStatusType Uart_gt_DataRegisterStatus(Uart_ChannelType t_ChannelId)
+{
+	Uart_TxStatusType t_ReturnValue;
+	uint8 uc_StatusRegister;
+	uc_StatusRegister = (uint8) *Uart_pt_GroupsConfig[t_ChannelId].pt_Registers[UART_STATUS_REGISTER];
+	if((uc_StatusRegister & UART_DATA_REGISTER_EMPTY_BIT) != 0)
+	{
+		t_ReturnValue = UART_DATA_REG_EMPTY;
+		
+	}
+	else
+	{
+		t_ReturnValue = UART_DATA_REG_NOT_EMPTY;
+	}
+	return t_ReturnValue;
+}
+
+
+
+
+
+
+
 
 #if(UART_RECEIVE_API == STD_ON)
 /**
@@ -143,3 +174,20 @@ void Uart_gv_Receive(Uart_ChannelType t_ChannelId, uint8 * puc_ReceiveAddr)
 	*puc_ReceiveAddr =  (uint8) *Uart_pt_GroupsConfig[t_ChannelId].pt_Registers[UART_RECEIVE_REGISTER];
 }
 #endif
+
+/**
+* \brief   
+* \param   
+* \param   
+* \return  -
+*/
+void Uart_gv_TransmitString_CH_0(char uc_Byte, FILE * pt_Stream)
+{
+	
+	if (uc_Byte == '\n')
+	{
+			Uart_gv_TransmitString_CH_0('\r',pt_Stream);
+	}
+	while(Uart_gt_DataRegisterStatus(UART_TX_D_1) == UART_DATA_REG_NOT_EMPTY);
+	  *Uart_pt_GroupsConfig[UART_TX_D_1].pt_Registers[UART_TRANSMIT_REGISTER] = uc_Byte;
+}

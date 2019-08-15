@@ -1,32 +1,39 @@
 /*
- * NanoArchitecture.c
- *
- * Created: 7/14/2019 12:55:11 PM
- * Author : baciu
- * AVR_Pocket command: -c usbtiny -p m328p -v -v -v -U flash:w:$(TargetDir)$(TargetName).hex:i
- */ 
+* NanoArchitecture.c
+*
+* Created: 7/14/2019 12:55:11 PM
+* Author : baciu
+* AVR_Pocket command: -c usbtiny -p m328p -v -v -v -U flash:w:$(TargetDir)$(TargetName).hex:i
+*/
 #define F_CPU (16000000U)
 #include <avr/io.h>
 #include <util/delay.h>
+
 #include "Port.h"
 #include "Dio.h"
 #include "Adc.h"
+#include "Uart.h"
+
 
 int main(void)
 {
-DDRD |= 0xFF;// setting the pin PD3 as output
-Port_Init(&Port_gkt_Config);
-for(;;)
+	FILE Uart_t_Output = FDEV_SETUP_STREAM(Uart_gv_TransmitString_CH_0, NULL, _FDEV_SETUP_WRITE);
+	stdout = &Uart_t_Output;
 
-{
+	Port_Init(&Port_gkt_Config);
+	Uart_gv_Init(&Uart_gkt_Cfg);
 
-	
-Dio_WritePort(DIO_PORTB,0xFF);
-	_delay_ms(1000);//function name will differ for //atmel studio
+	for(;;)
 
-Dio_WritePort(DIO_PORTB,0x00);
-_delay_ms(1000);//function name will differ for //atmel studio
+	{
 
-}
+		printf("saca\n");
+		Dio_WritePort(DIO_PORTB,0xFF);
+		_delay_ms(1000);//function name will differ for //atmel studio
+
+		Dio_WritePort(DIO_PORTB,0x00);
+		_delay_ms(1000);//function name will differ for //atmel studio
+
+	}
 }
 

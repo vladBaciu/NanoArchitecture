@@ -19,7 +19,12 @@
  ../07_Libraries/Std/Generic/Code/Compiler.h \
  ../07_Libraries/RegisterInit/Generic/RegisterInit.h \
  ../05_MCAL/Dio/Code/Generic/Dio.h ../05_MCAL/Dio/Code/Config/Dio_Cfg.h \
- ../05_MCAL/Adc/Code/Config/Adc.h ../05_MCAL/Adc/Code/Generic/Adc_Cfg.h
+ ../05_MCAL/Adc/Code/Config/Adc.h ../05_MCAL/Adc/Code/Generic/Adc_Cfg.h \
+ ../06_ComplexDrivers/Uart/Generic/Uart.h \
+ ../06_ComplexDrivers/Uart/Config/Uart_Cfg.h \
+ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h \
+ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
+ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h
 
 d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -66,3 +71,13 @@ d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
 ../05_MCAL/Adc/Code/Config/Adc.h:
 
 ../05_MCAL/Adc/Code/Generic/Adc_Cfg.h:
+
+../06_ComplexDrivers/Uart/Generic/Uart.h:
+
+../06_ComplexDrivers/Uart/Config/Uart_Cfg.h:
+
+d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
+
+d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h:
+
+d:\programe\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h:
