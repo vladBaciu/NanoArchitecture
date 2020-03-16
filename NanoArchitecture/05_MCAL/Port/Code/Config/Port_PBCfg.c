@@ -58,7 +58,7 @@ static const RegInit_Unmasked8BitsSingleType Port_kt_RegisterTable[PORT_NUMBER_O
 	*/
 	{
 		(volatile uint8 *) &DDRB,
-		0x00,
+		0x03,
 	},
 	
 	/*		DATA DIRECTION REGISTER FOR PORT c
@@ -78,7 +78,7 @@ static const RegInit_Unmasked8BitsSingleType Port_kt_RegisterTable[PORT_NUMBER_O
 	*/
 	{
 		(volatile uint8 *) &DDRD,
-		0x00,
+		0xF0,
 	},
 	
 	

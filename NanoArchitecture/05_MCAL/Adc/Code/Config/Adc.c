@@ -14,6 +14,9 @@
 /*                                             Definition Of Local Macros                                            */
 /*-------------------------------------------------------------------------------------------------------------------*/
 #define ADC_CLEAR_CHANNEL_VALUE (0x00)
+#define ADC_CHANNEL_MASK		(0x07)
+#define ADC_ADMUX_MASK			(0xF8)
+#define ADC_START_CONVERSION	(ADSC)
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                           Definition Of Local Data Types                                          */
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -26,7 +29,7 @@
 static uint8* Adc_apul_AdressBuffer[ADC_NUMBER_OF_GROUPS];
 
 /** \brief  Stores the address of the selected post-build configuration. */
-static Adc_GroupCfgType * Adc_pt_GroupsConfig;
+static Adc_GroupCfgType *Adc_pt_GroupsConfig;
 
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                          Declaration Of Global Variables                                          */
@@ -71,8 +74,11 @@ void Adc_Init(const Adc_ConfigType* ConfigPtr)
  */
 void Adc_StartGroupConversion(Adc_GroupType Group)
 {
-
-
+	
+	Adc_GroupType t_Channel = (Adc_GroupType) (Adc_pt_GroupsConfig[Group].t_Channel & ADC_CHANNEL_MASK);
+	*Adc_pt_GroupsConfig[Group].pt_MuxRegister = (ADC_ADMUX_MASK & *Adc_pt_GroupsConfig[Group].pt_MuxRegister) | t_Channel;
+	*Adc_pt_GroupsConfig[Group].pt_StartRegister |= (1<<ADC_START_CONVERSION);
+	
 }
 
 /**

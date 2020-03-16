@@ -67,8 +67,8 @@ typedef struct
 {
 	/** \brief ADC channel number */
 	Adc_GroupType t_Channel;
-
-
+	volatile uint8  *pt_MuxRegister;	
+	volatile uint8  *pt_StartRegister;	
 } Adc_GroupCfgType;
 
 typedef struct

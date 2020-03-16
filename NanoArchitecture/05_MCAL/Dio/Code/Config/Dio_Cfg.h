@@ -26,6 +26,14 @@
 #define DIO_PORTC			   (1U)
 /** \brief  Index for PORTB in configuration array */
 #define DIO_PORTD			   (2U)
+
+#define DIO_PINB_0			   (0U)
+
+#define DIO_PINB_1             (1U)
+
+#define DIO_PIND_6			   (22U)
+
+#define DIO_PIND_7			   (23U)
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                          Definition Of Global Data Types                                          */
 /*-------------------------------------------------------------------------------------------------------------------*/

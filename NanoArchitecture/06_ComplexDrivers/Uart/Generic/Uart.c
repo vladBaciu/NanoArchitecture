@@ -128,13 +128,6 @@ Uart_DataRegisterStatusType Uart_gt_DataRegisterStatus(Uart_ChannelType t_Channe
 	return t_ReturnValue;
 }
 
-
-
-
-
-
-
-
 #if(UART_RECEIVE_API == STD_ON)
 /**
 * \brief   Reads the receive register status.
@@ -175,6 +168,7 @@ void Uart_gv_Receive(Uart_ChannelType t_ChannelId, uint8 * puc_ReceiveAddr)
 }
 #endif
 
+#if (UART_TRANSMIT_STREAM_API == STD_ON)
 /**
 * \brief   
 * \param   
@@ -191,3 +185,5 @@ void Uart_gv_TransmitString_CH_0(char uc_Byte, FILE * pt_Stream)
 	while(Uart_gt_DataRegisterStatus(UART_TX_D_1) == UART_DATA_REG_NOT_EMPTY);
 	  *Uart_pt_GroupsConfig[UART_TX_D_1].pt_Registers[UART_TRANSMIT_REGISTER] = uc_Byte;
 }
+
+#endif

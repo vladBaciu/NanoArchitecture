@@ -79,11 +79,11 @@ void Dio_WriteChannel(Dio_ChannelType ChannelId, Dio_LevelType Level)
 
 	if (Level == STD_HIGH)
 	{
-		*(Dio_gkat_PortAdressWrite[t_PortNumber].pt_Registers) |= uc_Mask;
+		*(Dio_gkat_PortAdressWrite[t_PortNumber].pt_Registers) |= (1 << uc_Mask);
 	}
 	else
 	{
-		*(Dio_gkat_PortAdressWrite[t_PortNumber].pt_Registers) &= ~(uc_Mask);
+		*(Dio_gkat_PortAdressWrite[t_PortNumber].pt_Registers) &= ~(1 << uc_Mask);
 	}
 }
 

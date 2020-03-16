@@ -18,6 +18,7 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 #if NULL_PTR
 
+#undef NULL_PTR
 /** \brief  Defines the macro for the NULL pointer. */
 #define NULL_PTR     ((void*) 0x00)
 #endif

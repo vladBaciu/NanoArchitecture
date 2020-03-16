@@ -12,6 +12,7 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 #include "Adc.h"
 #include "Adc_Cfg.h"
+
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                             Definition Of Local Macros                                            */
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -52,6 +53,8 @@
 #define ADC15_CH                       (15U)
 
 #define ADC_RESERVED_CHANNEL		   (0xFFU)
+
+#define NULL_PTR					   (0X00U)
 /*-------------------------------------------------------------------------------------------------------------------*/
 /*                                           Definition Of Local Data Types                                          */
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -73,46 +76,46 @@ static const Adc_GroupCfgType Adc_kat_AdcGroups[ADC_NUMBER_OF_GROUPS] =
 {
 
 	/* ADC group 0 : ADC2_CH10 - PC0 pin */
-	{ ADC0_CH },
+	{ ADC0_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA },
 		
 	/* ADC group 2 : ADC2_CH12 - PC2 pin */
-	{ ADC1_CH },
+	{ ADC1_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA },
 		
 	/* ADC group 2 : ADC2_CH6  - PA6 pin */
-	{ ADC2_CH},
+	{ ADC2_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA  },
 		
-	{ ADC3_CH },
+	{ ADC3_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA   },
 		
 	/* ADC group 2 : ADC2_CH12 - PC2 pin */
-	{ ADC4_CH },
+	{ ADC4_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA   },
 		
 	/* ADC group 2 : ADC2_CH6  - PA6 pin */
-	{ ADC5_CH},
+	{ ADC5_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA  },
 		
 	/* ADC group 2 : ADC2_CH12 - PC2 pin */
-	{ ADC6_CH },
+	{ ADC6_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA   },
 		
 	/* ADC group 2 : ADC2_CH6  - PA6 pin */
-	{ ADC7_CH},
+	{ ADC7_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA  },
 		
 	/* ADC group 2 : ADC2_CH6  - PA6 pin */
-	{ ADC8_CH},
+	{ ADC8_CH, (volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA  },
 	
-	{ ADC_RESERVED_CHANNEL},
+	{ ADC_RESERVED_CHANNEL, NULL_PTR, NULL_PTR },
 		
 	/* ADC group 2 : ADC2_CH12 - PC2 pin */
-	{ ADC_RESERVED_CHANNEL },
+	{ ADC_RESERVED_CHANNEL, NULL_PTR, NULL_PTR },
 		
 	/* ADC group 2 : ADC2_CH6  - PA6 pin */
-	{ ADC_RESERVED_CHANNEL},
+	{ ADC_RESERVED_CHANNEL, NULL_PTR, NULL_PTR},
 		
 	/* ADC group 2 : ADC2_CH6  - PA6 pin */
-	{ ADC_RESERVED_CHANNEL},
+	{ ADC_RESERVED_CHANNEL, NULL_PTR, NULL_PTR},
 		
-	{ ADC14_CH},
+	{ ADC14_CH,(volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA },
 		
 	/* ADC group 2 : ADC2_CH6  - PA6 pin */
-	{ ADC15_CH},
+	{ ADC15_CH,(volatile uint8*) &ADMUX, (volatile uint8*) &ADCSRA },
 	
 
 };

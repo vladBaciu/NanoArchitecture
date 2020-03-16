@@ -22,18 +22,64 @@ int main(void)
 
 	Port_Init(&Port_gkt_Config);
 	Uart_gv_Init(&Uart_gkt_Cfg);
-
+    Dio_WritePort(DIO_PORTB,0xFF);
+	Dio_WritePort(DIO_PORTD,0xFF);
+ uint8 uc_RxCommand;
 	for(;;)
 
 	{
 
-		printf("saca\n");
-		Dio_WritePort(DIO_PORTB,0xFF);
-		_delay_ms(1000);//function name will differ for //atmel studio
-
-		Dio_WritePort(DIO_PORTB,0x00);
-		_delay_ms(1000);//function name will differ for //atmel studio
-
+		Uart_gv_Receive(UART_RX_D_0,&uc_RxCommand);
+		printf("%d",uc_RxCommand);
+		switch(uc_RxCommand)
+		{ 
+			//releu 1
+			case 0x31:
+				Dio_WriteChannel(DIO_PINB_0, STD_LOW);
+				_delay_ms(1000);
+			break;
+			//releu1
+			case 0x32:
+				Dio_WriteChannel(DIO_PINB_0, STD_HIGH);
+				_delay_ms(1000);
+			break;
+			//releu2
+			case 0x33:
+				Dio_WriteChannel(DIO_PINB_1, STD_LOW);
+				_delay_ms(1000);
+			break;
+			//releu2
+			case 0x34:
+				Dio_WriteChannel(DIO_PINB_1, STD_HIGH);
+				_delay_ms(1000);
+			break;
+			//releu3
+			case 0x35:
+				Dio_WriteChannel(DIO_PIND_6, STD_LOW);
+				_delay_ms(1000);
+			break;
+			case 0x36:
+				Dio_WriteChannel(DIO_PIND_6, STD_HIGH);
+				_delay_ms(1000);
+			break;
+			//releu4
+			case 0x37:
+				Dio_WriteChannel(DIO_PIND_7, STD_LOW);
+				_delay_ms(1000);
+			break;
+			case 0x38: 
+				Dio_WriteChannel(DIO_PIND_7, STD_HIGH);
+				_delay_ms(1000);
+			break;
+			default:
+				Dio_WritePort(DIO_PORTD,~0x00);
+				Dio_WritePort(DIO_PORTB,~0x00);
+			break;
+			
+		}
+		
+		
+	
 	}
 }
 
